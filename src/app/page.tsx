@@ -4,7 +4,7 @@ import { InvestmentsList } from '@/components/investments-list'
 
 export default function Home() {
   return (
-    <main className="min-h-screen" suppressHydrationWarning>
+    <main className="min-h-screen">
       <div className="flex gap-12 max-w-5xl mx-auto pt-32 pr-8">
         {/* Profile Picture */}
         <div className="w-48 h-64 relative flex-shrink-0 ml-8">
