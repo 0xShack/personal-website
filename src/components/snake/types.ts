@@ -11,4 +11,5 @@ export type GameState = {
   direction: Direction;
   isGameOver: boolean;
   score: number;
+  isFirstGame: boolean;
 }; 

@@ -10,6 +10,7 @@ const createInitialState = (): GameState => ({
   direction: 'RIGHT',
   isGameOver: false,
   score: 0,
+  isFirstGame: true,
 });
 
 export const useGameLogic = () => {
@@ -78,7 +79,10 @@ export const useGameLogic = () => {
   }, [generateFood]);
 
   const startGame = useCallback(() => {
-    setGameState(createInitialState());
+    setGameState(prev => ({
+      ...createInitialState(),
+      isFirstGame: false,
+    }));
     setIsRunning(true);
     if (gameLoop.current) clearInterval(gameLoop.current);
     gameLoop.current = setInterval(moveSnake, INITIAL_SPEED);

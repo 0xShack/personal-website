@@ -48,7 +48,11 @@ export const SnakeGame: React.FC = () => {
           onClick={gameState.isGameOver ? startGame : togglePause}
           className={styles.button}
         >
-          {gameState.isGameOver ? 'Start New Game' : (isRunning ? 'Pause' : 'Resume')}
+          {gameState.isGameOver 
+            ? 'Start New Game' 
+            : (gameState.isFirstGame 
+                ? 'Start' 
+                : (isRunning ? 'Pause' : 'Resume'))}
         </button>
       </div>
     </div>

@@ -6,76 +6,81 @@ import { SnakeGameWrapper } from '@/components/snake/SnakeGameWrapper'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-[#FAFAFA] dark:bg-[#0A0A0A]">
-      <div className="flex flex-col min-h-screen relative">
-        <div className="flex gap-16 max-w-4xl mx-auto pt-24 px-8">
-          {/* Profile Picture */}
-          <div className="w-48 h-64 relative flex-shrink-0">
+    <main className="min-h-screen bg-gradient-to-b from-[#FAFAFA] to-[#F5F5F5] dark:from-[#0A0A0A] dark:to-[#111111]">
+      <div className="flex flex-col min-h-screen relative max-w-6xl mx-auto">
+        {/* Hero Section */}
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 pt-32 px-8">
+          {/* Profile Picture Container */}
+          <div className="relative w-48 h-64 lg:w-[340px] lg:h-[460px] flex-shrink-0">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 rounded-lg -rotate-2"></div>
             <Image
               src="/pfp.jpeg"
               alt="Caleb A. Shack"
               fill
-              className="object-contain rounded-sm"
+              className="object-cover rounded-lg shadow-xl hover:scale-[1.02] transition-transform duration-300"
               priority
             />
           </div>
 
-          {/* Text Content */}
-          <div className="space-y-4">
+          {/* Content Section */}
+          <div className="flex flex-col justify-center space-y-8">
             {/* Header */}
-            <h1 className="text-5xl font-semibold tracking-tight">
-              Caleb A. Shack
-            </h1>
-            
-            {/* Bio */}
-            <p className="text-lg text-muted-foreground font-light">
-              Angel and VC | Prev Big Brain Holdings & Penn | Helping Founders Build
-            </p>
+            <div className="space-y-4">
+              <h1 className="text-6xl font-bold tracking-tight bg-gradient-to-r from-gray-900 to-gray-600 dark:from-white dark:to-gray-200 bg-clip-text text-transparent">
+                Caleb A. Shack
+              </h1>
+              <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-2xl">
+                Head of Ecosystem at Arch | Prev Big Brain Holdings & Penn | Helping Founders Build
+              </p>
+            </div>
 
             {/* Social Links */}
-            <div className="space-y-2 text-sm font-light">
-              <div className="flex gap-2 items-center">
-                find me on
-                <Link 
-                  href="https://twitter.com/firstc0in" 
-                  className="text-blue-600 dark:text-blue-400 hover:underline"
-                  target="_blank"
-                >
-                  𝕏
-                </Link>
-                {' '}and{' '}
-                <Link 
-                  href="https://t.me/Shack0x" 
-                  className="text-blue-600 dark:text-blue-400 hover:underline"
-                  target="_blank"
-                >
-                  telegram
-                </Link>
+            <div className="space-y-3 text-base font-light">
+              <div className="flex items-center gap-6">
+                <span className="text-muted-foreground">find me on</span>
+                <div className="flex gap-4">
+                  <Link 
+                    href="https://twitter.com/firstc0in" 
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                    target="_blank"
+                  >
+                    𝕏
+                  </Link>
+                  <Link 
+                    href="https://t.me/Shack0x" 
+                    className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                    target="_blank"
+                  >
+                    telegram
+                  </Link>
+                </div>
               </div>
 
-              <div className="flex gap-2 items-center">
-                read my
+              <div className="flex items-center gap-6">
+                <span className="text-muted-foreground">read my</span>
                 <Link 
                   href="https://curiousandcritical.com" 
-                  className="text-blue-600 dark:text-blue-400 hover:underline"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                 >
                   blog
                 </Link>
               </div>
             </div>
 
-            {/* Private Investments */}
-            <InvestmentsList />
+            {/* Investments Section */}
+            <div className="pt-4">
+              <InvestmentsList />
+            </div>
           </div>
         </div>
 
         {/* Footer Section */}
         <div className="fixed bottom-0 left-0 right-0 pb-12">
-          {/* Apple positioned on the right */}
-          <div className="absolute right-8 bottom-16">
+          {/* Snake Game - Hidden in plain sight */}
+          <div className="absolute right-8 bottom-16 opacity-30 hover:opacity-100 transition-opacity duration-300">
             <SnakeGameWrapper />
           </div>
-          {/* Bitcoin symbol remains centered */}
+          {/* Bitcoin symbol with enhanced styling */}
           <div className="flex justify-center">
             <BitcoinSymbol />
           </div>
