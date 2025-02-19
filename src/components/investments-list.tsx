@@ -1,5 +1,6 @@
 'use client'
 
+import { useState } from 'react'
 import Link from 'next/link'
 import {
   Accordion,
@@ -10,10 +11,27 @@ import {
 import investments from '@/data/investments.json'
 
 export function InvestmentsList() {
+  const [isOpen, setIsOpen] = useState(false)
+  const [isHovered, setIsHovered] = useState(false)
+
+  const handleTriggerClick = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
-    <Accordion type="single" collapsible className="w-full">
+    <Accordion 
+      type="single" 
+      collapsible 
+      className="w-full"
+      value={(isHovered || isOpen) ? "investments" : undefined}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <AccordionItem value="investments" className="border-0">
-        <AccordionTrigger className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors [&[data-state=open]>svg]:hidden [&>svg]:hidden text-base font-light py-0 -ml-[2px] group flex items-center">
+        <AccordionTrigger 
+          onMouseEnter={() => setIsHovered(true)}
+          onClick={handleTriggerClick}
+          className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors [&[data-state=open]>svg]:hidden [&>svg]:hidden text-base font-light py-0 -ml-[2px] group flex items-center"
+        >
           <span className="flex items-center gap-1.5">
             portfolio
             <span className="text-gray-400 dark:text-gray-600 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-xs">
@@ -21,7 +39,7 @@ export function InvestmentsList() {
             </span>
           </span>
         </AccordionTrigger>
-        <AccordionContent>
+        <AccordionContent onMouseEnter={() => setIsHovered(true)}>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4">
             {investments.investments.map((investment, index) => (
               <li key={index} className="group">

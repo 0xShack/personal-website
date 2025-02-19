@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { GameBoard } from './GameBoard';
 import { useGameLogic } from './useGameLogic';
 import styles from './SnakeGame.module.css';

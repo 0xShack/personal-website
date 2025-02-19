@@ -79,7 +79,7 @@ export const useGameLogic = () => {
   }, [generateFood]);
 
   const startGame = useCallback(() => {
-    setGameState(prev => ({
+    setGameState(() => ({
       ...createInitialState(),
       isFirstGame: false,
     }));
