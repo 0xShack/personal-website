@@ -2,11 +2,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { InvestmentsList } from '@/components/investments-list'
 import { BitcoinSymbol } from '@/components/bitcoin-symbol'
+import { SnakeGameWrapper } from '@/components/snake/SnakeGameWrapper'
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-[#FAFAFA] dark:bg-[#0A0A0A]">
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col min-h-screen relative">
         <div className="flex gap-16 max-w-4xl mx-auto pt-24 px-8">
           {/* Profile Picture */}
           <div className="w-48 h-64 relative flex-shrink-0">
@@ -68,9 +69,16 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Bitcoin Symbol Footer */}
-        <div className="mt-auto flex justify-center pb-12 pt-16">
-          <BitcoinSymbol />
+        {/* Footer Section */}
+        <div className="fixed bottom-0 left-0 right-0 pb-12">
+          {/* Apple positioned on the right */}
+          <div className="absolute right-8 bottom-16">
+            <SnakeGameWrapper />
+          </div>
+          {/* Bitcoin symbol remains centered */}
+          <div className="flex justify-center">
+            <BitcoinSymbol />
+          </div>
         </div>
       </div>
     </main>

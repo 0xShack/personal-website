@@ -13,7 +13,7 @@ export function InvestmentsList() {
   return (
     <Accordion type="single" collapsible className="w-full">
       <AccordionItem value="investments" className="border-0">
-        <AccordionTrigger className="hover:no-underline [&[data-state=open]>svg]:hidden [&>svg]:hidden text-sm font-light py-0 -ml-[2px]">
+        <AccordionTrigger className="hover:underline [&[data-state=open]>svg]:hidden [&>svg]:hidden text-sm font-light py-0 -ml-[2px]">
           portfolio
         </AccordionTrigger>
         <AccordionContent>
