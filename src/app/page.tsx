@@ -65,6 +65,17 @@ export default function Home() {
                   blog
                 </Link>
               </div>
+
+              <div className="flex items-center gap-6">
+                <span className="text-muted-foreground">open water</span>
+                <Link 
+                  href="https://results.swimserpentine.co.uk/2024/?content=detail&fpid=search&pid=search&idp=9TGM4SI71074&lang=EN_CAP&event=TMS&search%5Bname%5D=Shack&search%5Bfirstname%5D=Caleb&search_event=TMS" 
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                  target="_blank"
+                >
+                  swim the serpentine 2024
+                </Link>
+              </div>
             </div>
 
             {/* Investments Section */}
