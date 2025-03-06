@@ -75,7 +75,7 @@ export default function Home() {
         </div>
 
         {/* Footer Section */}
-        <div className="fixed bottom-0 left-0 right-0 pb-12">
+        <div className="relative mt-20 mb-12 md:fixed md:bottom-0 md:left-0 md:right-0 md:pb-12">
           {/* Snake Game - Hidden in plain sight */}
           <div className="absolute right-8 bottom-16 opacity-30 hover:opacity-100 transition-opacity duration-300">
             <SnakeGameWrapper />
