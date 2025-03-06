@@ -6,8 +6,8 @@ import { SnakeGameWrapper } from '@/components/snake/SnakeGameWrapper'
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#FAFAFA] to-[#F5F5F5] dark:from-[#0A0A0A] dark:to-[#111111]">
-      <div className="flex flex-col min-h-screen relative max-w-6xl mx-auto">
+    <main className="min-h-screen p-4 md:p-24 bg-gradient-to-b from-[#FAFAFA] to-[#F5F5F5] dark:from-[#0A0A0A] dark:to-[#111111]">
+      <div className="flex flex-col md:flex-row gap-4 max-w-6xl mx-auto">
         {/* Hero Section */}
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 pt-32 px-8">
           {/* Profile Picture Container */}
