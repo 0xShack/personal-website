@@ -30,7 +30,7 @@ export default function Home() {
                 Caleb A. Shack
               </h1>
               <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-2xl">
-                Head of Ecosystem at Arch | Prev Big Brain Holdings & Penn | Helping Founders Build
+                Helping Founders Build
               </p>
             </div>
 
