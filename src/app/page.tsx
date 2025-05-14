@@ -76,6 +76,17 @@ export default function Home() {
                   swim the serpentine 2024
                 </Link>
               </div>
+
+              <div className="flex items-center gap-6">
+                <span className="text-muted-foreground">collection</span>
+                <Link 
+                  href="https://magiceden.us/u/firstc0in?chains=%5B%22bitcoin%22%5D&wallets=%5B%22bc1ptsxrjx4ut692rz3mp5waj3vazcygee3x9xknvnw0zs74de9axadsgtp954%22%5D&activeTab=%22showcase%22"
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                  target="_blank"
+                >
+                  magic eden
+                </Link>
+              </div>
             </div>
 
             {/* Investments Section */}
