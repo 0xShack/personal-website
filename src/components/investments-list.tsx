@@ -33,7 +33,7 @@ export function InvestmentsList() {
           className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors [&[data-state=open]>svg]:hidden [&>svg]:hidden text-base font-light py-0 -ml-[2px] group flex items-center"
         >
           <span className="flex items-center gap-1.5">
-            portfolio
+            angel portfolio
             <span className="text-gray-400 dark:text-gray-600 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-xs">
               →
             </span>

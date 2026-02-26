@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { InvestmentsList } from '@/components/investments-list'
-import { BitcoinSymbol } from '@/components/bitcoin-symbol'
 import { SnakeGameWrapper } from '@/components/snake/SnakeGameWrapper'
 
 export default function Home() {
@@ -30,7 +29,7 @@ export default function Home() {
                 Caleb A. Shack
               </h1>
               <p className="text-xl text-muted-foreground font-light leading-relaxed max-w-2xl">
-                Helping Founders Build
+                Partner @ Variant
               </p>
             </div>
 
@@ -47,7 +46,7 @@ export default function Home() {
                     𝕏
                   </Link>
                   <Link 
-                    href="https://t.me/Shack0x" 
+                    href="https://t.me/shack_variant" 
                     className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
                     target="_blank"
                   >
@@ -56,15 +55,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex items-center gap-6">
-                <span className="text-muted-foreground">read my</span>
-                <Link 
-                  href="https://curiousandcritical.com" 
-                  className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
-                >
-                  blog
-                </Link>
-              </div>
+              
 
               <div className="flex items-center gap-6">
                 <span className="text-muted-foreground">open water</span>
@@ -77,16 +68,7 @@ export default function Home() {
                 </Link>
               </div>
 
-              <div className="flex items-center gap-6">
-                <span className="text-muted-foreground">collection</span>
-                <Link 
-                  href="https://magiceden.us/u/firstc0in?chains=%5B%22bitcoin%22%5D&wallets=%5B%22bc1ptsxrjx4ut692rz3mp5waj3vazcygee3x9xknvnw0zs74de9axadsgtp954%22%5D&activeTab=%22showcase%22"
-                  className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
-                  target="_blank"
-                >
-                  magic eden
-                </Link>
-              </div>
+              
             </div>
 
             {/* Investments Section */}
@@ -101,10 +83,6 @@ export default function Home() {
           {/* Snake Game - Hidden in plain sight */}
           <div className="absolute right-8 bottom-16 opacity-30 hover:opacity-100 transition-opacity duration-300">
             <SnakeGameWrapper />
-          </div>
-          {/* Bitcoin symbol with enhanced styling */}
-          <div className="flex justify-center">
-            <BitcoinSymbol />
           </div>
         </div>
       </div>
