@@ -8,7 +8,7 @@ export default function Home() {
     <main className="min-h-screen p-4 md:p-24 bg-gradient-to-b from-[#FAFAFA] to-[#F5F5F5] dark:from-[#0A0A0A] dark:to-[#111111]">
       <div className="flex flex-col md:flex-row gap-4 max-w-6xl mx-auto">
         {/* Hero Section */}
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 pt-32 px-8">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 pt-18 px-8">
           {/* Profile Picture Container */}
           <div className="relative w-48 h-64 lg:w-[340px] lg:h-[460px] flex-shrink-0">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-purple-500/10 dark:from-blue-500/20 dark:to-purple-500/20 rounded-lg -rotate-2"></div>
